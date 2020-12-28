@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="quikr, quikr-clone, clone website, javascript, ecommerce, ecommerce site"/>
+    <meta name="description" content="A clone of the popular website quikr.com. This is a duplicate version of quikr inspired to create an ecommerce website. The landing page looks like quikr.com and every button in the landing page takes you to an ecommerce page where you may add any item to the cart. The items added are shown in the cart window and can be deleted on choice. Another important aspect of this project is that all the pages were created as seperate html files. So the items added to the cart are stored in local storage and the cart accesses them as arrays using JSON. So the items that are added to the cart once is showed every time you try and access the cart and can only removed be removed by deleting them in the cart window or by clearing the localstorage object manually."/>
+    <meta name="author" content="Manjunath-A, amanjunathmanju4@gmail.com">
+    <title>Quickr clone Project</title>
+    <link type= "text/css" rel= "stylesheet" href= "styles.css">
+    <script src="https://kit.fontawesome.com/6f8cff6e9c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class= "nav-container">
+        <ul class= "nav-bar">
+            <li><span><i class="fas fa-bars"></i></span></li>
+            <li class= "icon"><a href= "index.html"><img src= "images/quikr_logo.png" alt= "logo-image"></a></li>
+            
+            <li><form class= 'nav-search' action= "/" method= "get">
+            <div class= "location-category">
+                <div class= "location-drop">
+                    <label for= "location"><a><span><i class="fas fa-map-marker-alt"></i></span>   <a>All India</a>   <span><i class="fas fa-angle-down"></i></span></a></label>
+                    <select name= "location">
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                    </select>
+                </div>
+                <div class= "search-container">
+                    <div class= "category-drop">
+                        <label for= "categories"><a>All Categories<span><i class="fas fa-angle-down"></i></span></a></label>
+                        <select name= "categories">
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                        </select>
+                    </div>
+                    <label for= "search-input">
+                        <input type= "text" class= "search" placeholder= "search in All India"><a><span><i class="fas fa-search"></i></span></a>
+                </div>
+                </div>
+            </form></li>
+            <li class= "login-register"><a href="form validation/index.html"><span><i class="far fa-user-circle"></i></span>   Login/Register</a></li>
+            <li class= "shopping-cart"><a href= "cart/index.html"><span><i class="fas fa-shopping-cart"></i></span>   Cart</a></li>
+        </ul>
+    </div>
+
+    <div class= "scroll-section">
+        <div class= "side-scroll">
+            <div class= "fixed-sidebar">
+                <div class= "Side-scroll-data">                    
+                    Quikr Assured Products
+                </div>
+                <div class= "Side-scroll-data">
+                    Furniture & Decor
+                </div>
+                <div class= "Side-scroll-data">
+                    Appliances, ACs
+                </div>
+                <div class= "Side-scroll-data">
+                    Services
+                </div>
+                <div class= "Side-scroll-data">
+                    Jobs
+                </div>
+                <div class= "Side-scroll-data">
+                    Cars
+                </div>
+                <div class= "Side-scroll-data">
+                    Bikes
+                </div>
+                <div class= "Side-scroll-data">
+                    Homes
+                </div>
+                <div class= "Side-scroll-data">
+                    Mobiles & Tablets
+                </div>
+                <div class= "Side-scroll-data">
+                    Gift Cards
+                </div>
+                <div class= "Side-scroll-data">
+                    Co-working Spaces
+                </div>
+                <div class= "Side-scroll-data">
+                    Personal Loan
+                </div>
+                <div class= "Side-scroll-data">
+                    Sports, Hobbies, Fashion
+                </div>
+                <div class= "Side-scroll-data">
+                    Kids & Toys
+                </div>
+                <div class= "Side-scroll-data">
+                    Education
+                </div>
+                <div class= "Side-scroll-data">
+                    Commercial Real Estate
+                </div>
+                <div class= "Side-scroll-data">
+                    Pets & Pet Care
+                </div>
+                <div class= "Side-scroll-data">
+                    Home & Lifestyle
+                </div>
+                <div class= "Side-scroll-data">
+                    B2B Suppliers
+                </div>
+                <div class= "Side-scroll-data">
+                    Entertainment
+                </div>
+                <div class= "Side-scroll-data">
+                    Community
+                </div>
+                <div class= "Side-scroll-data">
+                    Events
+                </div>
+                <div class= "Side-scroll-data">
+                    Matrimonial
+                </div>
+            </div>
+        </div>
+
+        <div class= "main-scroll">
+                <div class= "grid-mains">
+                        <div class= "quick-bazaar quikrbox">
+                        <header class= "bazaar-head">
+                            <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                            <p>see all</p>
+                        </header>
+                            <p class= "line-1">Quikr Bazaar is a whole new way to buy and sell used goods</p>
+                            <p class= "line-1">Furniture & Decor</p>
+                            <p class= "line-1">Electronics & Appliances</p>
+                            <p class= "line-1">Mobiles & Tablets</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-homes quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Buy, Sell & Rent real estate properties in India</p>
+                            <p class= "line-1">Houses-Apartment for Sale</p>
+                            <p class= "line-1">Houses-Apartment for Rent</p>
+                            <p class= "line-1">Commercial Properties For Sale</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-jobs quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Thousands of jobs to choose from in your industries</p>
+                            <p class= "line-1">Bpo / Telecaller</p>
+                            <p class= "line-1">Delivery / Collections</p>
+                            <p class= "line-1">Data Entry / Back office</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-cars quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Buy & sell new and used cars or book a variety of auto services</p>
+                            <p class= "line-1">Used Cars</p>
+                            <p class= "line-1">Featured Cars</p>
+                            <p class= "line-1">New Cars</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-bikes quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Buy and sell lakhs of used bikes & scooters across India</p>
+                            <p class= "line-1">Used Bikes</p>
+                            <p class= "line-1">Featured Bikes</p>
+                            <p class= "line-1">Sell Your Bike</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-easy quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Connect with experts for 300+ Services</p>
+                            <p class= "line-1">Interior Design</p>
+                            <p class= "line-1">Packers and Movers</p>
+                            <p class= "line-1">B2B Suppliers</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-learner quikrbox">
+                            <header class= "bazaar-head">
+                                <img src= "images/quickrbazaar_logo.png" alt= "bazaar-logo">
+                                <p>see all</p>
+                            </header>
+                            <p class= "line-1">Explore your chances of landing a seat in your dream college</p>
+                            <p class= "line-1">CollegesStudy</p>
+                            <p class= "line-1">Abroad</p>
+                            <p class= "line-1">Distance Learning</p>
+                            <p class= "line-1">View All Categories</p>
+                        </div>
+                        <div class= "quick-financial quikrbox">
+                            <header class= "bazaar-head">
+                                <p>Financial Services</p>
+                            </header>
+                            <p class= "line-1">Explore all your financial needs in your fingertips</p>
+                            <p class= "line-1">Personal Loan</p>
+                            <p class= "line-1">CA Services</p>
+                            <p class= "line-1">Insurance</p>
+                            <p class= "line-1">Credit Cards</p>
+                        </div>
+                        <div class= "quick-morecategories quikrbox">
+                            <header class= "bazaar-head">
+                                <p>More Categories</p>
+                            </header>
+                            <p class= "line-1">Explore the endless possibilities in your preferred  category</p>
+                            <p class= "line-1">Education & Training</p>
+                            <p class= "line-1">Gift Cards</p>
+                            <p class= "line-1">Events</p>
+                            <p class= "line-1">Pets & Pet Care</p>
+                        </div>
+                </div>
+
+                <div class= 'registerearn'>
+                        <div class= "registerearn1">
+                            Register & Earn
+                        </div>
+                        <div class= "registerearn2">
+                            <p> Register with us and earn Rs.500 to your QCash account</p>
+                            <button>Register Now</button>
+                        </div>
+                </div>
+
+                <div class= "quickr-rest">
+
+                        <div class= "carsbikes-ads ads">
+                            <p>Cars & Bikes Ads in</p>
+                            <div class= "wrapper">
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+
+                        <div class= "homes-ads ads">
+                            <p>Quikr Homes Ads in</p>
+                            <div class= "wrapper">
+                                
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class= "jobs-ads ads">
+                            <p>Quikr Jobs Ads in</p>
+                            <div class= "wrapper">
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class= 'item'>
+                                    <header class= "item-header">
+                                        <span>
+                                            <img class= "thumbnail" src="images/quickr_thumbnail.webp" alt="item-thumbnail">
+                                        </span>
+                                        <div class= "item-name">
+                                            74750 kms/petrol
+                                        </div>
+                                    </header>
+                                    <div class= "item-details">
+                                        <h4>looking to buy a car</h4>
+                                        <p>4,13,000</p>
+                                        <div class= "view-button">
+                                            <p>bangalore</p>
+                                            <button><a href= "product display/index.html">View</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class= "dream-gadgets ads">
+                            
+                            <p>Get Your Dream Gadgets</p>                            
+                            <div class= "wrapper">     
+
+                                <div class= 'item hoverback'  style="background-image: url('images/mobiles_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Mobiles</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback'  style="background-image: url('images/iphone_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Iphones</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback' style="background-image: url('images/tablets_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Tables</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback' style="background-image: url('images/accesories_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Accesories</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        <div class= "about-education ads">
+                            <p>All About Education</p>
+                            <div class= "wrapper">
+
+                                <div class= 'item hoverback'  style="background-image: url('images/college_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Colleges</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback'  style="background-image: url('images/abroad_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Abroad</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback'  style="background-image: url('images/distance_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Distant</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback'  style="background-image: url('images/coaching_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Exam Coaching</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class= "design-lifestyle ads">
+                            <p>Design Your Lifestyle</p>
+                            <div class= "wrapper">
+
+                                <div class= 'item hoverback'  style="background-image: url('images/homeoffice_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Home Office</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback' style="background-image: url('images/fitness_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Fitness</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback' style="background-image: url('images/clothing_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>clothing</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                                <div class= 'item hoverback' style="background-image: url('images/musical_thumb.jpg');">
+                                    <div class= "hoverback-details">
+                                        <h4>Musical Instruments</h4>
+                                        <p><small>search from a wide range of used and pre owned mobile devices.</small></p>
+                                        <button><a href= "product display/index.html">Explore<i class="fas fa-angle-right"></i></a></button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class= "recieve-alerts">
+                    <P>I Want To Recieve Alerts</p>
+                    <div class= "form-in-alerts">
+                        <select class= "select-in-alerts" name="category">
+                            <option value= "option1">option1</option>
+                            <option value= "option2">option2</option>
+                            <option value= "option3">option3</option>
+                            <option value= "option4">option4</option>
+                        </select>
+                        <select class= "select-in-alerts" name="category">
+                            <option value= "option1">option1</option>
+                            <option value= "option2">option2</option>
+                            <option value= "option3">option3</option>
+                            <option value= "option4">option4</option>
+                        </select>
+                        <select class= "select-in-alerts" name="category">
+                            <option value= "option1">option1</option>
+                            <option value= "option2">option2</option>
+                            <option value= "option3">option3</option>
+                            <option value= "option4">option4</option>
+                        </select>
+                        <select class= "select-in-alerts" name="category">
+                            <option value= "option1">option1</option>
+                            <option value= "option2">option2</option>
+                            <option value= "option3">option3</option>
+                            <option value= "option4">option4</option>
+                        </select>
+                        <input type= "email" name= "email" placeholder= "Email Address">
+                        <input type= "text" name= "mobile" placeholder= "Mobile Number">
+                        <button class= "button-in-alerts">Create Alert</button>
+                    </div>
+                </div>
+
+                <div class= "gift-cards">
+                    <header class= "gift-cards-header">
+                        Gift Cards
+                    </header>
+                    <div class= "giftcards-collection">
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/big_bazaar-giftcard.png" alt= "big bazaar"></br>
+                                    <figcaption>Big Bazaar</figcaption>
+                                </figure>
+                            </div> 
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/book_my_show-giftcard.png" alt= "book my show"></br>
+                                    <figcaption>Book My Show</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/cleartrip-giftcard.png" alt= "cleartrip"></br>
+                                    <figcaption>Cleartrip</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/flipkart-giftcard.png" alt= "flipkart"></br>
+                                    <figcaption>Flipkart</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/gap-giftcard.png" alt= "gap"></br>
+                                    <figcaption>Gap</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/myntra-giftcard.png" alt= "myntra"></br>
+                                    <figcaption>Myntra</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/netmeds_v2-giftcard.png" alt= "netmeds"></br>
+                                    <figcaption>Netmeds</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/peter_england-giftcard.png" alt= "peter england"></br>
+                                    <figcaption>Peter England</figcaption>
+                                </figure>
+                            </div>                
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/pvr-giftcard.png" alt= "pvr"></br>
+                                    <figcaption>PVR Cinemas</figcaption>
+                                </figure>
+                            </div>
+                            <div class= "gift-cards-thumbnails">
+                                <figure>
+                                    <img src= "images/big_bazaar-giftcard.png" alt= "Big basket"></br>
+                                    <figcaption>Big Basket</figcaption>
+                                </figure>
+                            </div>
+                    </div>
+                </div> 
+
+                <div class= "quikr-brands">
+                    <header>
+                        Other Quikr Brands
+                    </header>                    
+                    <div class= "brand-scroll">
+                        
+                        <div class= "brand-logos">
+                            <figure>
+                                <img src= "images/dazzlr_logo.png" alt= "dazzlr-logo">
+                                <figcaption>Dazzlr</figcaption>
+                            </figure>
+                        </div>
+                        <div class= "brand-logos">
+                            <figure>
+                                <img src= "images/zefo_logo.png" alt= "zefo-logo">
+                                <figcaption>Zefo</figcaption>
+                            </figure>
+                        </div>
+                        <div class= "brand-logos">
+                            <figure>
+                                <img src= "images/commonfloor_logo.png" alt= "common_floor-logo">
+                                <figcaption>Common Floor</figcaption>
+                            </figure>
+                        </div>
+                        <div class= "brand-logos">
+                            <figure>
+                                <img src= "images/dazzlr_logo.png" alt= "dazzlr-logo">
+                                <figcaption>Dazzlr</figcaption>
+                            </figure>
+                        </div>
+
+                    </div>
+                </div>                
+
+        </div>        
+
+    </div>
+
+    
+
+    </body>
+    </html>

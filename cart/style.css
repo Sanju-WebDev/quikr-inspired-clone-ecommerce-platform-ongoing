@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(#d3d3d3, #f3f3f3);
+    min-height: 100vh;
+}
+
+.nav-container {
+    height: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    min-height: 10vh;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    width:100%;
+    justify-content: space-around;;
+    margin-top: 0;
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    color: #333333;
+    font-family: arial sans-serif;
+}
+
+ul a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.icon img{
+    width: 10vw;
+    
+}
+
+.location-drop select{
+    width: 100px;
+    position: absolute;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+}
+
+.location-drop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.category-drop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.category-drop select {
+    width: 120px;;
+    position: absolute;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    border-right: 1px dotted #333333;
+    margin-right: 5px;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid #0083ca;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.search-container .fa-search {
+    color: white;;
+    background-color: #0083ca;
+    padding: 10px;
+}
+
+.location-category {
+    display: flex;
+    min-width: 50vw;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cart-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 8%;
+    background-color: #ffffff;
+}
+
+.cart-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-family: arial;
+}
+
+.cart-container>header {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.cart-container .cart-item-each {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+    border-bottom: 2px solid #f3f3f3;
+}
+
+.cart-item .product-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item .product-thumb img {
+    width: 80px;
+    height: 160px;
+}
+
+.cart-item .cart-product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: arial;
+    color: #666666;
+}
+
+.cart-item .cart-product-info .quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 300px;
+}
+
+.cart-item .cart-product-info .quantity input{
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.cart-item .cart-product-info .quantity button {
+    width: 100px;
+    height: 50px;
+    border: 2px solid #d3d3d3;
+    background-color: white;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 18px;
+    color: grey;
+    transition: 0.5s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.cart-item .cart-product-info .quantity button:hover {
+    color: white;
+    background-color: grey;
+    border: none;
+}
+
+.cart-item .product-price {
+    padding: 20px;
+    font-size: 20px;
+    font-family: arial;
+    color: #666666;
+    display: flex;
+}
+
+.cart-container .cart-total {
+    display: flex;
+    flex-direction: column;
+    font-family: arial;
+    padding: 20px;  
+    padding-left: 80%;  
+    font-size: 22px;
+    color: #666666;
+}
+
+.cart-container .cart-total button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333333;
+}
+
+.cart-container .cart-total button:hover {
+    opacity: 0.5;
+}
+
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color: #232f3e;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    color: white;
+    font-family: arial;
+}
+
+.footer-container h4 {
+    padding-left: 20px;
+    margin-top: 50px;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    display: block;
+    color: #dddddd;
+    background-color: #232f3e;
+}
+
+.footer-container ul li {
+    padding: 5px;
+    font-family: arial;
+    font-size: 14px;
+}

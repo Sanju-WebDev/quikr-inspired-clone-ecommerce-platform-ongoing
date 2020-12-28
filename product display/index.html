@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Display</title>
+    <link type= "text/css" rel= "stylesheet" href= "style.css">
+    <script src="https://kit.fontawesome.com/6f8cff6e9c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class= "nav-container">
+        <ul class= "nav-bar">
+            <li><span><i class="fas fa-bars"></i></span></li>
+            <li class= "icon"><a href= "../index.html"><img src= "images/quikr_logo.png" alt= "logo-image"></a></li>
+            
+            <li><form class= 'nav-search' action= "/" method= "get">
+            <div class= "location-category">
+                <div class= "location-drop">
+                    <label for= "location"><a><span><i class="fas fa-map-marker-alt"></i></span>   <a>All India</a>   <span><i class="fas fa-angle-down"></i></span></a></label>
+                    <select name= "location">
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                        <option value= ""></option>
+                    </select>
+                </div>
+                <div class= "search-container">
+                    <div class= "category-drop">
+                        <label for= "categories"><a>All Categories<span><i class="fas fa-angle-down"></i></span></a></label>
+                        <select name= "categories">
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                            <option value= ""></option>
+                        </select>
+                    </div>
+                    <label for= "search-input">
+                        <input type= "text" class= "search" placeholder= "search in All India"><a><span><i class="fas fa-search"></i></span></a>
+                </div>
+                </div>
+            </form></li>
+            <li class= "login-register"><a href="form validation/index.html"><span><i class="far fa-user-circle"></i></span>   Login/Register</a></li>
+            <li class= "shopping-cart"><a href= "../cart/index.html"><span><i class="fas fa-shopping-cart"></i></span>   Cart</a></li>
+        </ul>
+    </div>
+
+    <div class= "carousel-container">
+
+        <i id= "nextBtn" class= "fas fa-chevron-circle-right"></i>
+        <i id= "prevBtn" class= "fas fa-chevron-circle-left"></i>
+
+        <div class= "bubble-btns">
+            <div class= "btn"></div>
+            <div class= "btn"></div>
+            <div class= "btn"></div>
+            <div class= "btn active"></div>
+        </div>
+
+        <div class= "carousel-slider">
+            
+            <img src= "images/accesories_carousel.jpg" alt= "accesories" id= "lastCopy">
+            <a href= "#mobile-product"><img src= "images/mobile_carousel.jpg" alt= "mobile" id= "mobile"></a>
+            <a href= "#iphone-product"><img src= "images/iphone_carousel.jpg" alt= "iphone" id= "iphone"></a>
+            <a  href= "#tablet-product"><img src= "images/tablet_carousel.jpg" alt= "tablet" id= "tablet"></a>
+            <a  href= "#accessories-product"><img src= "images/accesories_carousel.jpg" alt= "accesories" id= "accesories"></a>
+            <img src= "images/mobile_carousel.jpg" alt= "mobile" id= "firstCopy">
+
+        </div>
+    </div>
+
+    <div class= "product-cards">
+
+        <div class= "single-product" id= "mobile-product">
+            <div class= "product-image">
+                <img src= "images/mobile_product_image.jpg" alt= "mobile product image" name= "" class= "product-thumb">
+                <div class= "hover-over-image">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class= "product-info">
+                <header class= 'product-name'>
+                    <h3>Samsung Galaxy A10s with Fingerprint (32GB, 2GB RAM) 6.2", Android 9.0, Dual SIM GSM Factory Unlocked A107M/DS - US + Global 4G LTE International Model (Blue, 32GB + 64GB SD Bundle)</h3>                    
+                </header>
+                <div class= "product-info-para">
+                    <ul>
+                       <li>6.2", IPS LCD capacitive touchscreen, 16M colors, Mediatek MT6762 Helio P22 (12 nm), Octa-core Processor</li>
+                       <li>Dual SIM, Unlocked, Android 9.0 (Pie), Samsung One UI; 32GB storage expandable with SD card up to 512GB + 2 GB RAM</li>
+                       <li>13MP+2MP Dual Rear Camera (F1.8), 8MP Front-Facing Camera (F2.0), Does NOT have NFC</li>
+                    </ul>
+                </div>
+                <div class= "cart-buttons">
+                    <p class= "priceOfItem">$ 19.99</p>
+                    <button class= "add-to-cart">Add to Cart</button>
+                    <button class= "buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class= "single-product" id= "iphone-product">
+            <div class= "product-image">
+                <img src= "images/iphone_product_image.jpg" alt= "iphone product image" name= "" class= "product-thumb">
+                <div class= "hover-over-image">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class= "product-info">
+                <header class= 'product-name'>
+                    <h3>New Apple iPhone 12 Pro Max (128GB, Graphite) [Locked] + Carrier Subscription</h3>                    
+                </header>
+                <div class= "product-info-para">
+                    <ul>
+                        <li>Ceramic Shield, tougher than any smartphone glass</li>
+                        <li>A14 Bionic chip, the fastest chip ever in a smartphone</li>
+                        <li>Pro camera system with 12MP Ultra Wide, Wide and Telephoto cameras; 5x optical zoom range; Night mode, Deep Fusion, Smart HDR 3, Apple ProRAW, 
+                        4K Dolby Vision HDR recording</li>
+                        <li>LiDAR Scanner for improved AR experiences, Night mode portraits</li>                       
+                    </ul>
+                </div>
+                <div class= "cart-buttons">
+                    <p class= "priceOfItem">$ 19.99</p>
+                    <button class= "add-to-cart">Add to Cart</button>
+                    <button class= "buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class= "single-product" id= "tablet-product">
+            <div class= "product-image">
+                <img src= "images/tablet_product_image.jpg" alt= "tablet product image" name= "" class= "product-thumb">
+                <div class= "hover-over-image">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class= "product-info">
+                <header class= 'product-name'>
+                    <h3>VANKYO MatrixPad Z1 7 inch Tablet, Android 10, 32GB Storage, Quad-Core Processor, IPS HD Display, Wi-Fi, Bluetooth, Black, 2020 Upgrade</h3>                    
+                </header>
+                <div class= "product-info-para">
+                    <ul>
+                       <li>32GB ROM, Expandable up to 128GB: The tablet offers 32GB of onboard memory and includes a microSD card slot (microSD card sold separately)</li>
+                       <li>that allows you to add up to an additional 128GB of memory, making it easy to store songs, videos, photos, games, and other files.</li>                       
+                    </ul>
+                </div>
+                <div class= "cart-buttons">
+                    <p class= "priceOfItem">$ 19.99</p>
+                    <button class= "add-to-cart">Add to Cart</button>
+                    <button class= "buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class= "single-product" id= "accessories-product">
+            <div class= "product-image">
+                <img src= "images/accessories_product_image.jpg" alt= "accessories product image" name= "" class= "product-thumb">
+                <div class= "hover-over-image">
+                    <i class="far fa-heart"></i>
+                </div>
+            </div>
+
+            <div class= "product-info">
+                <header class= 'product-name'>
+                    <h3>Noise Cancelling Headphones Bluetooth V5.0 Wireless,40Hours Playtime Headsets Over Ear with Microphones&Fast Charge,Srhythm NC75 Pro for 
+                    TV/PC/Cell Phone - Low Latency</h3>                    
+                </header>
+                <div class= "product-info-para">
+                    <ul>
+                       <li>Luxury Products Level,World-Leading Digital Active Noise Cancelling (ANC): Professional ANC technology quells 92% low-frequency background 
+                       noise of city traffic,office,plane cabin or hubbub.</li>
+                       <li>It makes you focus on what you want to hear, enjoy your music, movies and videos. Noise cancellation function can work 
+                       well both in wired and wireless mode</li>                       
+                    </ul>
+                </div>
+                <div class= "cart-buttons">
+                    <p class= "priceOfItem">$ 19.99</p>
+                    <button class= "add-to-cart">Add to Cart</button>
+                    <button class= "buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class= "footer">
+        <div class= "footer-container">
+            <div>
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li>Careers</li>
+                    <li>Blog</li>
+                    <li>About Amazon</li>
+                    <li>Sustainability</li>
+                    <li>Investor Relations</li>
+                    <li>Devices</li>
+                    <li>Tours</li>
+                </ul>
+            </div>
+            <div>
+            <h4>Make Money with Us</h4>
+                <ul>
+                    <li>Sell products</li>
+                    <li>Sell apps</li>
+                    <li>Become an Affiliate</li>
+                    <li>Advertise Your Products</li>
+                    <li>Self-Publish with Us</li>
+                    <li>Host an Hub</li>
+                    <li>See More Make Money with Us</li>
+                </ul>
+            </div>
+            <div>
+            <h4>Payment Products</h4>
+                <ul>
+                    <li>Business Card</li>
+                    <li>Shop with Points</li>
+                    <li>Reload Your Balance</li>
+                    <li>Currency Converter</li>                    
+                </ul>
+            </div>
+            <div>
+            <h4>Let Us Help You</h4>
+                <ul>
+                    <li>COVID-19</li>
+                    <li>Your Account</li>
+                    <li>Your Orders</li>
+                    <li>Shipping Rates & Policies</li>
+                    <li>Returns & Replacements</li>
+                    <li>Manage Your Content and Devices</li>
+                    <li>Assistant</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <script type= "text/javascript" src= "script.js"></script>
+
+</body>
+</html>
+
